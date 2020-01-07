@@ -504,3 +504,16 @@ function getContrastYIQ(hexcolor){
 	return (yiq >= 128) ? 'black' : 'white';
 }
 
+const indicatorOne = document.querySelector("figure.l-one");
+const indicatorTwo = document.querySelector("figure.l-two");
+
+
+function setIndicatorColor(el) {
+    if (el.checked) {
+        indicatorOne.classList.add("hide");
+        indicatorTwo.classList.remove("hide");
+    } else {
+        indicatorOne.classList.remove("hide");
+        indicatorTwo.classList.add("hide");
+    }
+}

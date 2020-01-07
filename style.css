@@ -14,6 +14,7 @@
   --text1: #f1f1f1;
   --bg2: #f1f1f1;
   --text2: #202020;
+  --indicatorColor: #ffffff;
   --accentSlider: #fff;
   --testColor: red;
   --transitionTimingLong: .7s cubic-bezier(0.47,-0.02, 0.99, 0.26);
@@ -343,9 +344,15 @@ figure {
   width: 100%;
   height: 3px;
   transform-origin: left;
-  transition: all var(--loadDuration) linear;
   transform: scaleX(0);
-  background: white;
+}
+.unit-content .content-top .stepper span figure.l-one {
+  background: #fff;
+  transform: scale(1);
+}
+.unit-content .content-top .stepper span figure.l-two {
+  background: var(--accentMain);
+  transform: scale(1);
 }
 .unit-content .content-top .top-bar {
   margin-top: var(--playerSmallPadding);

@@ -43,7 +43,7 @@
                             <div class="unit-content">
                                 <div class="content-top">
                                     <section class="stepper">
-                                        <span data-type="cover"><figure></figure></span>
+                                        <span data-type="cover"><figure class="l-one""></figure><figure class="l-two hide""></figure></span>
                                         <span data-type="description"><figure></figure></span>
                                         <span data-type="bullet-list"><figure></figure></span>
                                         <span data-type="quote"><figure></figure></span>
@@ -193,16 +193,23 @@
                         <div class="spacer" style="display: block; height: 10px"></div>
                         <div class="spacer" style="display: block; height: 10px"></div>
                         <div class="spacer" style="display: block; height: 10px"></div>
+                     
                         <div class="advanced">
-                            <p style="font-size: 14px;">advanced</p>
+
+                            <!-- <p style="font-size: 14px;">advanced</p> -->
                             <div class="spacer" style="display: block; height: 10px"></div>
-                            <p>background 1</p>
+                            <div>
+                                <input type="checkbox" id="accent" name="accent" onchange="setIndicatorColor(this)">
+                                <label style="font-size: 12px" for="accent">use accent color for progress indicator</label>
+                            </div>
+                            <div class="spacer" style="display: block; height: 10px"></div>
+                            <p>color 1</p>
                             <input type="color" id="bg1Picker" name="bg1Picker" >
                             <!-- <p>text color 1</p>
                             <input type="color" id="text1Picker" name="text1Picker" > -->
                             <div class="spacer" style="display: block; height: 10px"></div>
-                            <div class="spacer" style="display: block; height: 10px"></div>
-                            <p>background 2</p>
+                            <!-- <div class="spacer" style="display: block; height: 10px"></div> -->
+                            <p>color 2</p>
                             <input type="color" id="bg2Picker" name="bg2Picker" >
                             <!-- <p>text color 2</p>
                             <input type="color" id="text2Picker" name="text2Picker" > -->
