@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>color configuration
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="main">
+            <div class="preview">
+                <button class="" onclick="previewCover()">cover</button>
+                <button class="" onclick="previewSlide1()">description</button>
+                <button class="" onclick="previewSlide2()">bullet list</button>
+                <button class="" onclick="previewSlide3()">quote</button>
+            </div>
+            <p></p>
+            <div class="player-unit">
+                <div id="cnx-unit" cover>
+                    <div class="unit-wrapper">
+                        
+                        <div id="unit-main">
+                            <div class="slides">
+                                <div class="cover">
+                                    <img src="assets/slides/cover.jpg" alt="">
+                                </div>
+                                <div class="slider">
+                                    <div data-type="description" data-title="First Slide Stuff" class="slide slide-1">
+                                        <img src="assets/slides/1.jpg" alt="">
+                                    </div>
+                                    <div data-type="bullet-list" data-title="Bullet List Slide" class="slide slide-2">
+                                        <img src="assets/slides/img.jpg" alt="">
+                                    </div>
+                                    <div  data-type="quote" data-title="Quote by Page" class="slide slide-3">
+                                        <img src="assets/slides/3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="unit-content">
+                                <div class="content-top">
+                                    <section class="stepper">
+                                        <span data-type="cover"><figure></figure></span>
+                                        <span data-type="description"><figure></figure></span>
+                                        <span data-type="bullet-list"><figure></figure></span>
+                                        <span data-type="quote"><figure></figure></span>
+                                        
+                                    </section>
+                                    <section class="top-bar v1 ">
+                                        <div class="left">
+                                            <figure class="logo popLogo">
+                                                <div class="front">
+                                                    <img class="logoasset" src="assets/logo/cnn.png" alt="">
+                                                </div>
+                                            </figure>
+                                            <div class="details hide">
+                                                <span>Larry Page</span>
+                                                <span class="slide-title ">-</span>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <figure>
+                                                <a class="control" href="#">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#dots"></use>
+                                                    </svg>
+                                                </a>
+                                            </figure>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div discovered cover  class="unit-bottom">
+                            <div class="content cover">
+                                <div class="title-wrapper"><span class="title">The story behind <em>Larry Page</em></span></div>
+                                <div class="title-spacer"></div>
+                                <div class="subtitle-wrapper"><span class="subtitle">Computer Scientist, Internet Entrepreneur</span></div>
+                            </div>
+                            <footer>
+                                <span>2 minute story</span>
+                                <button class="main v1 hide" onclick="">start</button>
+                                <button class="main v2" onclick="startReading()">
+                                    <div class="loader">
+                                        <svg class="c1">
+                                            <g id="circle" viewBox="0 0 32 32" stroke-width="3" fill="none" fill-rule="evenodd">
+                                                <circle id="strokee" miterlimit="10" stroke="#ffffff" cx="16" cy="17" r="14"></circle>
+                                            </g>
+                                        </svg>
+                                        <svg class="c2">
+                                            <g id="circle2" viewBox="0 0 32 32" stroke-width="3" fill="none" fill-rule="evenodd">
+                                                <circle id="adsf" miterlimit="10" stroke="#ffffff" cx="16" cy="17" r="14"></circle>
+                                            </g>
+                                        </svg>
+                                        <span id="count">8</span>
+                                    </div>
+                                    start
+                                </button>
+                            </footer>
+                        </div>
+                        <div discovered slider class="unit-bottom hide">
+                            <div description class="content hide">
+                                <div class="description-1-wrapper">
+                                    <span class="description-1">
+                                        <em>Lawrence Edward Page </em>is an American computer scientist and Internet entrepreneur. He is best known for being one of the co-founders of <em>Google</em> along with <em>Sergey Brin</em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div bullet-list class="content hide">
+                                <div class="bullet-1-wrapper">
+                                    <!-- <div class="title"> Optional Title for the bullet list</div> -->
+                                    <ul>
+                                        <li class="">
+                                            <div class="item-title item-title-1">
+                                                <span> Chief executive officer of Alphabet Inc.</span>
+                                            </div>
+                                            <div class="title-spacer"></div>
+                                            <div class="item-body">
+                                                <span>After stepping aside as Google CEO in August 2001, in favor of Eric Schmidt, he re-assumed the role in April 2011</span>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="item-title item-title-2">
+                                                <span>Page is the 9th-richest person in the world</span>
+                                            </div>
+                                            <div class="title-spacer"></div>
+                                            <div class="item-body">
+                                                <span>With a net worth of $55.8 billion.[7] Forbes placed him 10th in the list "Billionaires 2019"</span>
+                                            </div>
+                                        </li>
+                                        <li class="">
+                                            <div class="item-title item-title-3 ">
+                                                <span>Page is the co-inventor of PageRank</span>
+                                            </div>
+                                            <div class="title-spacer"></div>
+                                            <div class="item-body">
+                                                <span>a well-known search ranking algorithm for Google, which he wrote with Brin.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div quote class="content hide">
+                                    <div class="quote-1-wrapper">
+                                        <span class="quote-1">
+                                            <span class="open-quote">
+                                                <svg class="icon">
+                                                    <use xlink:href="#open-quote"></use>
+                                                </svg>
+                                            </span>For a lot of companies, it’s useful for them to feel like they have an obvious competitor and to rally around that. I personally believe it’s better to shoot higher. You don’t want to be looking at your competitors. You want to be looking at what’s possible and how to make the world better
+                                            <span class="closing-quote">
+                                                <svg class="icon">
+                                                    <use xlink:href="#close-quote"></use>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                        
+                                        <span class="author-1">
+                                            <em>Larry Page</em> The Verge: "Larry Page is quietly amassing a 'flying car' empire" 
+                                            <!-- (19 July 2018) i need a longer sentence. -->
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="secondary">
+                <div class="keep-top">
+                    <!-- <div>
+                        <p>web page container size:</p>
+                        <button onclick="pageBig()">Large</button>
+                        <button onclick="pageNormal()">Normal</button>
+                    </div> -->
+                    <!-- <div class="spacer" style="display: block; height: 10px"></div>
+                        <div id="logoFlipPicker" class="hide">
+                            <p>logo flip:</p>
+                            <button id="logoflip" class="flip" onclick="logoKeepAvatar()" ><span class="active left">Yes</span> <span class="right">No</span></button>
+                        </div> -->
+                        <div class="spacer" style="display: block; height: 10px"></div>
+                        <div>
+                            <p>accent color</p>
+                            <input type="color" id="accentPicker" name="accentPicker" >
+                        </div>
+                        <div class="spacer" style="display: block; height: 10px"></div>
+                        <div class="spacer" style="display: block; height: 10px"></div>
+                        <div class="spacer" style="display: block; height: 10px"></div>
+                        <div class="spacer" style="display: block; height: 10px"></div>
+                        <div class="spacer" style="display: block; height: 10px"></div>
+                        <div class="advanced">
+                            <p style="font-size: 14px;">advanced</p>
+                            <div class="spacer" style="display: block; height: 10px"></div>
+                            <p>background 1</p>
+                            <input type="color" id="bg1Picker" name="bg1Picker" >
+                            <!-- <p>text color 1</p>
+                            <input type="color" id="text1Picker" name="text1Picker" > -->
+                            <div class="spacer" style="display: block; height: 10px"></div>
+                            <div class="spacer" style="display: block; height: 10px"></div>
+                            <p>background 2</p>
+                            <input type="color" id="bg2Picker" name="bg2Picker" >
+                            <!-- <p>text color 2</p>
+                            <input type="color" id="text2Picker" name="text2Picker" > -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="display-none">
+                <svg>
+                    <defs>
+                        <g id="logo" width="189" height="27" viewBox="0 0 189 27" fill="none" fill-rule="nonzero">
+                            <path fill="#F05514" d="M13.438 22.771c-5.14 0-9.338-4.196-9.338-9.336 0-5.14 4.197-9.304 9.338-9.304 5.141 0 9.306 4.197 9.306 9.304 0 5.172-4.165 9.336-9.306 9.336zm13.438-9.369l-3.058-2.765 1.236-3.936-4.035-.878-.878-4.034-3.937 1.269L13.406 0 10.64 3.058 6.703 1.822l-.879 4.033-4.034.879 1.269 3.936L0 13.467l3.059 2.766-1.237 3.936 4.035.878.878 4.034 3.937-1.269 2.799 3.058 2.765-3.058 3.937 1.236.879-4.034 4.035-.91-1.27-3.937 3.06-2.765z"/>
+                            <path fill="#F05514" d="M7.549 7.58a8.328 8.328 0 0 1 11.779 0 8.323 8.323 0 0 1 0 11.775 8.328 8.328 0 0 1-11.78 0c-3.253-3.253-3.253-8.555 0-11.775"/>
+                        </g>
+                        <g id="logo-big" width="189" height="27" viewBox="0 0 189 27" fill="none" fill-rule="nonzero">
+                            <path fill="#FFF" d="M183.058 22.739v-6.864c0-1.4.293-2.342.879-2.83.585-.488 1.561-.716 2.863-.716h1.269v-3.09h-1.074c-.976 0-1.822.13-2.505.422a4.054 4.054 0 0 0-1.66 1.237l-.65-1.66h-2.44v13.5h3.318zM171.28 11.743c.944 0 1.66.26 2.148.814.488.553.748 1.268.813 2.147h-6.117c.065-.911.326-1.627.814-2.147.488-.553 1.204-.814 2.147-.814h.195zm2.766 6.93c-.228.487-.553.878-.976 1.138-.423.293-.944.423-1.627.423h-.228c-1.008 0-1.757-.293-2.277-.846-.52-.553-.814-1.301-.879-2.18h9.469v-1.366c0-2.114-.553-3.806-1.66-5.042-1.106-1.269-2.635-1.887-4.555-1.887h-.228c-1.92 0-3.449.618-4.588 1.887-1.138 1.236-1.692 2.863-1.692 4.847v.878c0 .976.163 1.855.456 2.668a5.877 5.877 0 0 0 1.269 2.082 5.83 5.83 0 0 0 2.017 1.366c.814.325 1.692.488 2.7.488h.229c1.269 0 2.342-.26 3.253-.748s1.66-1.236 2.213-2.245l-2.896-1.464zm-20.271 4.066v-7.873c.033-.91.26-1.659.716-2.244.455-.586 1.139-.879 1.985-.879h.325c.748 0 1.334.228 1.757.716.456.455.65 1.236.65 2.31v8.002h3.32v-8.588c0-1.594-.423-2.863-1.302-3.838-.878-.976-2.017-1.464-3.481-1.464h-.39c-.717 0-1.4.13-2.018.423a5.332 5.332 0 0 0-1.627 1.17V3.84h-3.319v18.9h3.384zm-8.688-2.96c-.227-.196-.325-.554-.325-1.074v-6.799h3.254V9.239h-3.254v-2.96h-2.83l-.359 2.96h-2.212v2.667h2.115v6.831c0 1.236.293 2.212.878 2.928.586.716 1.595 1.074 2.994 1.074h2.635V20.07h-1.92c-.455 0-.78-.098-.976-.293zm-13.828.52c-.683 0-1.204-.13-1.562-.39-.358-.26-.553-.651-.553-1.14v-.097c0-.488.195-.91.618-1.236.39-.325 1.106-.488 2.148-.488h2.472v.488c0 .976-.26 1.692-.78 2.147-.521.456-1.237.716-2.083.716h-.26zm-.65 2.797c.878 0 1.626-.162 2.31-.488.683-.325 1.236-.813 1.691-1.496l.553 1.66h2.506v-8.85c0-1.658-.488-2.927-1.464-3.773-.977-.845-2.343-1.268-4.068-1.268h-.325c-1.562 0-2.798.325-3.71.943-.91.65-1.496 1.431-1.756 2.342l2.928 1.204c.163-.456.456-.813.846-1.139.39-.292.944-.455 1.627-.455h.325c.781 0 1.367.195 1.725.553.39.39.553.91.553 1.594v.683h-2.408c-1.985 0-3.481.39-4.523 1.171-1.04.78-1.561 1.822-1.561 3.09v.196c0 1.268.39 2.244 1.17 2.992.782.716 1.888 1.106 3.32 1.106h.26v-.065zm-12.495-11.353c.943 0 1.659.26 2.147.814.488.553.748 1.268.813 2.147h-6.117c.065-.911.326-1.627.814-2.147.488-.553 1.204-.814 2.147-.814h.196zm2.765 6.93c-.228.487-.553.878-.976 1.138-.423.293-.943.423-1.627.423h-.228c-1.008 0-1.757-.293-2.277-.846-.52-.553-.814-1.301-.879-2.18h9.469v-1.366c0-2.114-.553-3.806-1.66-5.042-1.106-1.269-2.635-1.887-4.555-1.887h-.26c-1.92 0-3.45.618-4.588 1.887-1.139 1.236-1.692 2.863-1.692 4.847v.878c0 .976.163 1.855.455 2.668a5.877 5.877 0 0 0 1.27 2.082 5.83 5.83 0 0 0 2.017 1.366c.813.325 1.692.488 2.7.488h.228c1.27 0 2.343-.26 3.254-.748s1.66-1.236 2.213-2.245l-2.864-1.464zM95.76 22.738l3.97-13.76 3.774 13.76h3.026l5.434-18.673V3.84h-3.254l-3.58 13.37-3.513-13.37h-3.58L94.36 17.436 90.878 3.84h-3.416v.227l5.206 18.673h3.091zm-21.312-13.5v8.555c0 1.594.423 2.863 1.301 3.839.879.975 2.018 1.463 3.482 1.463h.358c.813 0 1.561-.162 2.212-.488.684-.325 1.237-.813 1.692-1.43l.553 1.56h2.473v-13.5h-3.286v7.873c-.033.91-.26 1.659-.748 2.244-.489.586-1.14.879-2.018.879h-.325c-.716 0-1.302-.228-1.757-.716-.456-.455-.684-1.236-.684-2.31V9.206h-3.253v.033zm-3.645.553c-.91-.586-2.082-.879-3.546-.879h-.228c-1.92 0-3.449.553-4.588 1.692-1.139 1.138-1.692 2.635-1.692 4.522v1.724c0 1.886.553 3.415 1.692 4.521 1.139 1.139 2.636 1.692 4.588 1.692h.228c1.334 0 2.44-.26 3.319-.78.878-.521 1.561-1.27 2.082-2.31l-2.733-1.53a3.17 3.17 0 0 1-.976 1.27c-.423.325-.976.487-1.692.487h-.228c-1.041 0-1.79-.325-2.278-.943-.488-.618-.715-1.431-.715-2.44V15.16c0-1.008.227-1.822.715-2.44.488-.618 1.237-.943 2.278-.943h.228c.716 0 1.301.163 1.724.488.423.325.749.78.976 1.334l2.864-1.367c-.423-1.008-1.107-1.854-2.018-2.44zm-13.308 0c-.91-.586-2.082-.879-3.546-.879h-.228c-1.92 0-3.449.553-4.588 1.692-1.139 1.138-1.692 2.635-1.692 4.522v1.724c0 1.886.553 3.415 1.692 4.521 1.139 1.139 2.636 1.692 4.588 1.692h.228c1.334 0 2.44-.26 3.319-.78.878-.521 1.561-1.27 2.082-2.31l-2.733-1.53a3.17 3.17 0 0 1-.976 1.27c-.423.325-.976.487-1.692.487h-.228c-1.041 0-1.79-.325-2.278-.943-.488-.618-.715-1.431-.715-2.44V15.16c0-1.008.227-1.822.715-2.44.488-.618 1.237-.943 2.278-.943h.228c.716 0 1.301.163 1.724.488.423.325.749.78.976 1.334l2.864-1.367c-.456-1.008-1.106-1.854-2.018-2.44zM38.557 8.783l2.246 6.962H36.28l2.277-6.962zM36.963 3.84l-6.28 18.672v.228h3.287l1.301-3.937h6.54l1.27 3.937h3.448v-.228L40.25 3.839h-3.286z"/>
+                            <path fill="#F05514" d="M13.438 22.771c-5.14 0-9.338-4.196-9.338-9.336 0-5.14 4.197-9.304 9.338-9.304 5.141 0 9.306 4.197 9.306 9.304 0 5.172-4.165 9.336-9.306 9.336zm13.438-9.369l-3.058-2.765 1.236-3.936-4.035-.878-.878-4.034-3.937 1.269L13.406 0 10.64 3.058 6.703 1.822l-.879 4.033-4.034.879 1.269 3.936L0 13.467l3.059 2.766-1.237 3.936 4.035.878.878 4.034 3.937-1.269 2.799 3.058 2.765-3.058 3.937 1.236.879-4.034 4.035-.91-1.27-3.937 3.06-2.765z"/>
+                            <path fill="#F05514" d="M7.549 7.58a8.328 8.328 0 0 1 11.779 0 8.323 8.323 0 0 1 0 11.775 8.328 8.328 0 0 1-11.78 0c-3.253-3.253-3.253-8.555 0-11.775"/>
+                        </g>
+                        <g id="pause" viewBox="0 0 24 24" >
+                            <rect x="3.33" y="2.1" width="6" height="20"/><rect x="15.33" y="2.1" width="6" height="20"/>
+                        </g>
+                        <g id="next" viewBox="0 0 24 24" >
+                            <polygon points="21.63 21.7 21.63 2.5 17.79 2.5 17.79 12.1 17.79 21.7 21.63 21.7"/><polygon points="17.79 12.1 2.43 2.5 2.43 21.7 17.79 12.1"/>
+                        </g>
+                        <g id="prev" viewBox="0 0 24 24" >
+                            <polygon points="2.43 2.5 2.43 21.7 6.27 21.7 6.27 12.1 6.27 2.5 2.43 2.5"/><polygon points="6.27 12.1 21.63 21.7 21.63 2.5 6.27 12.1"/>
+                        </g>
+                        <g id="sound" viewBox="0 0 24 24" >
+                            <path d="M10.06,3.21,5.62,7.05H3.89A1.89,1.89,0,0,0,2,8.94v6.87a1.9,1.9,0,0,0,1.89,1.9H5.62l4.44,3.83a1.89,1.89,0,0,0,3.13-1.44V4.66A1.89,1.89,0,0,0,10.06,3.21Z"/><path d="M16.91,3.46A1.24,1.24,0,0,0,15.67,5.6a7.56,7.56,0,0,1,3.73,6.53,7.68,7.68,0,0,1-3.83,6.62,1.22,1.22,0,0,0-.45,1.69,1.3,1.3,0,0,0,1.09.65,1.19,1.19,0,0,0,.6-.15,10.13,10.13,0,0,0,5.08-8.76A10.3,10.3,0,0,0,16.91,3.46Z"/><path d="M18.51,12.13a4.78,4.78,0,0,0-2.84-4.38,1.25,1.25,0,1,0-1,2.29A2.22,2.22,0,0,1,16,12.13a2.26,2.26,0,0,1-1.44,2.14A1.24,1.24,0,0,0,15,16.66a1.46,1.46,0,0,0,.45-.1A4.69,4.69,0,0,0,18.51,12.13Z"/>
+                        </g>
+                        <g id="play" viewBox="0 0 24 24" >
+                            <polygon id="Path" fill-rule="nonzero" points="5 1 5 23 23 11.9165764"></polygon>
+                        </g>
+                        <g id="close" viewBox="0 0 24 24" >
+                            <polygon points="22 3.52 21.08 2.6 12.3 11.38 3.52 2.6 2.6 3.52 11.38 12.3 2.6 21.08 3.52 22 12.3 13.22 21.08 22 22 21.08 13.22 12.3 22 3.52"/>
+                        </g>
+                        <g id="dots" viewBox="0 0 24 24" >
+                            <path d="M12.76,6.59A2.28,2.28,0,0,0,15.05,4.3a2.29,2.29,0,1,0-2.29,2.29Z"/><circle cx="12.76" cy="12.27" r="2.29"/><path d="M12.76,18a2.28,2.28,0,0,0-2.29,2.29,2.21,2.21,0,0,0,2.29,2.2,2.28,2.28,0,0,0,2.29-2.29A2.21,2.21,0,0,0,12.76,18Z"/>
+                        </g>
+                        <g id="close-quote" viewBox="0 0 23 18">
+                            <path d="M-4.97379915e-14,12.382373 C-4.97379915e-14,11.0442877 0.191556526,9.7473938 0.574675325,8.49165227 C0.957794123,7.23591075 1.58035283,6.07282334 2.44237013,5.00235516 C3.30438743,3.93188697 4.41647948,2.96950934 5.77867965,2.11519338 C7.14087983,1.26087743 8.79039436,0.555820019 10.7272727,3.55271368e-14 L10.7272727,2.65557126 C8.59883496,3.31432091 7.03445666,4.11716 6.03409091,5.06411263 C5.03372516,6.01106525 4.53354978,7.102103 4.53354978,8.3372586 C4.53354978,8.74897713 4.6506121,9.09378623 4.88474026,9.37169624 C5.11886841,9.64960625 5.41152422,9.89663366 5.76271645,10.1127859 C6.11390868,10.3289381 6.49702173,10.5399407 6.9120671,10.7458 C7.32711246,10.9516592 7.71022552,11.1986866 8.06141775,11.4868896 C8.41260998,11.7750926 8.70526578,12.1301945 8.93939394,12.552206 C9.17352209,12.9742175 9.29058442,13.5042972 9.29058442,14.1424609 C9.29058442,15.3570305 8.88618731,16.2833834 8.07738095,16.9215471 C7.2685746,17.5597108 6.25758182,17.8787879 5.04437229,17.8787879 C4.38455659,17.8787879 3.74603483,17.7604206 3.12878788,17.5236824 C2.51154093,17.2869443 1.97411845,16.9369888 1.51650433,16.4738054 C1.05889021,16.0106221 0.6917402,15.4342248 0.41504329,14.7445962 C0.13834638,14.0549677 -4.97379915e-14,13.2675678 -4.97379915e-14,12.382373 Z"  transform="translate(5.363636, 8.939394) scale(-1, -1) translate(-5.363636, -8.939394) "></path>
+                            <path d="M12.5151515,12.382373 C12.5151515,11.0442877 12.706708,9.7473938 13.0898268,8.49165227 C13.4729456,7.23591075 14.0955043,6.07282334 14.9575216,5.00235516 C15.8195389,3.93188697 16.931631,2.96950934 18.2938312,2.11519338 C19.6560313,1.26087743 21.3055459,0.555820019 23.2424242,3.55271368e-14 L23.2424242,2.65557126 C21.0927021,3.31432091 19.5176818,4.11716 18.517316,5.06411263 C17.5169503,6.01106525 17.0167749,7.102103 17.0167749,8.3372586 C17.0167749,8.74897713 17.1338372,9.09378623 17.3679654,9.37169624 C17.6020935,9.64960625 17.9000703,9.89663366 18.2619048,10.1127859 C18.6237392,10.3289381 19.0068522,10.5399407 19.4112554,10.7458 C19.8156586,10.9516592 20.1987716,11.1986866 20.5606061,11.4868896 C20.9224405,11.7750926 21.2204173,12.1301945 21.4545455,12.552206 C21.6886736,12.9742175 21.8057359,13.5042972 21.8057359,14.1424609 C21.8057359,15.3570305 21.3960178,16.2833834 20.5765693,16.9215471 C19.7571207,17.5597108 18.7408069,17.8787879 17.5275974,17.8787879 C16.8677817,17.8787879 16.234581,17.7604206 15.6279762,17.5236824 C15.0213714,17.2869443 14.483949,16.9369888 14.0156926,16.4738054 C13.5474363,16.0106221 13.1802863,15.4342248 12.9142316,14.7445962 C12.6481769,14.0549677 12.5151515,13.2675678 12.5151515,12.382373 Z"  transform="translate(17.878788, 8.939394) scale(-1, -1) translate(-17.878788, -8.939394) "></path>
+                        </g>
+                        <g id="open-quote" viewBox="0 0 23 18" >
+                            <path d="M12.3846154,12.4663212 C12.3846154,11.1191642 12.5741739,9.81347782 12.9532967,8.5492228 C13.3324195,7.28496777 13.9484847,6.11399503 14.801511,5.03626943 C15.6545372,3.95854383 16.7550299,2.98964161 18.103022,2.12953368 C19.4510141,1.26942575 21.0833237,0.55958829 23,0 L23,2.67357513 C20.8937624,3.33679088 19.3457009,4.14507295 18.3557692,5.0984456 C17.3658375,6.05181824 16.8708791,7.15025285 16.8708791,8.39378238 C16.8708791,8.80829223 16.9867205,9.15543902 17.2184066,9.43523316 C17.4500927,9.71502731 17.7396961,9.96372948 18.0872253,10.1813472 C18.4347545,10.3989648 18.8138716,10.6113979 19.2245879,10.8186528 C19.6353043,11.0259078 20.0144213,11.2746099 20.3619505,11.5647668 C20.7094798,11.8549237 20.9990831,12.2124331 21.2307692,12.6373057 C21.4624554,13.0621783 21.5782967,13.5958517 21.5782967,14.238342 C21.5782967,15.461146 21.1781176,16.3937792 20.3777473,17.0362694 C19.577377,17.6787597 18.5769291,18 17.3763736,18 C16.72344,18 16.0915781,17.8808302 15.4807692,17.642487 C14.8699603,17.4041439 14.3381433,17.0518158 13.8853022,16.5854922 C13.4324611,16.1191687 13.0691406,15.5388636 12.7953297,14.8445596 C12.5215188,14.1502556 12.3846154,13.3575174 12.3846154,12.4663212 Z" ></path>
+                            <path d="M7.01660952e-14,12.4663212 C7.01660952e-14,11.1191642 0.189558544,9.81347782 0.568681319,8.5492228 C0.947804093,7.28496777 1.56386936,6.11399503 2.4168956,5.03626943 C3.26992185,3.95854383 4.37041451,2.98964161 5.71840659,2.12953368 C7.06639868,1.26942575 8.69870837,0.55958829 10.6153846,0 L10.6153846,2.67357513 C8.4880846,3.33679088 6.92949213,4.14507295 5.93956044,5.0984456 C4.94962875,6.05181824 4.45467033,7.15025285 4.45467033,8.39378238 C4.45467033,8.80829223 4.57051166,9.15543902 4.8021978,9.43523316 C5.03388394,9.71502731 5.32875279,9.96372948 5.68681319,10.1813472 C6.04487359,10.3989648 6.42399067,10.6113979 6.82417582,10.8186528 C7.22436098,11.0259078 7.60347806,11.2746099 7.96153846,11.5647668 C8.31959886,11.8549237 8.61446771,12.2124331 8.84615385,12.6373057 C9.07783999,13.0621783 9.19368132,13.5958517 9.19368132,14.238342 C9.19368132,15.461146 8.78823666,16.3937792 7.97733516,17.0362694 C7.16643367,17.6787597 6.16072029,18 4.96016484,18 C4.30723117,18 3.68063487,17.8808302 3.08035714,17.642487 C2.48007942,17.4041439 1.94826239,17.0518158 1.48489011,16.5854922 C1.02151783,16.1191687 0.658197287,15.5388636 0.394917582,14.8445596 C0.131637878,14.1502556 7.01660952e-14,13.3575174 7.01660952e-14,12.4663212 Z" ></path>
+                        </g>
+                        <!-- <g id="circle" viewBox="0 0 32 32" stroke-width="3" fill="none" fill-rule="evenodd">
+                            <circle class="strokee" stroke="#ffffff" cx="16" cy="17" r="14"></circle>
+                        </g> -->
+                        <!-- <g id="circle2" viewBox="0 0 32 32" stroke-width="3" fill="none" fill-rule="evenodd">
+                            <circle id="strokee2" stroke="#ffffff" cx="16" cy="17" r="14"></circle>
+                        </g> -->
+                    </defs>
+                </svg>
+            </div>
+        </body>
+        <script src="script.js"></script>
+        
+        </html>
