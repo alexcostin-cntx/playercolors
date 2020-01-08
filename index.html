@@ -193,26 +193,35 @@
                         <div class="spacer" style="display: block; height: 10px"></div>
                         <div class="spacer" style="display: block; height: 10px"></div>
                         <div class="spacer" style="display: block; height: 10px"></div>
-                     
+                        
                         <div class="advanced">
-
+                            
                             <!-- <p style="font-size: 14px;">advanced</p> -->
                             <div class="spacer" style="display: block; height: 10px"></div>
                             <div>
                                 <input type="checkbox" id="accent" name="accent" onchange="setIndicatorColor(this)">
                                 <label style="font-size: 12px" for="accent">use accent color for progress indicator</label>
                             </div>
+                            <div>
+                                <input type="checkbox" id="flip" name="flip" onchange="flipTitleColors(this)">
+                                <label style="font-size: 12px" for="accent">flip title colors</label>
+                            </div>
                             <div class="spacer" style="display: block; height: 10px"></div>
-                            <p>color 1</p>
-                            <input type="color" id="bg1Picker" name="bg1Picker" >
-                            <!-- <p>text color 1</p>
-                            <input type="color" id="text1Picker" name="text1Picker" > -->
+                            <div style="display: flex">
+                                <div style="margin-right: 10px;">
+                                    <p>color 1</p>
+                                    <input type="color" id="bg1Picker" name="bg1Picker" >
+                                </div>
+                                <div class="spacer" style="display: block; height: 10px"></div>
+                                
+                                <div>
+                                    <p>color 2</p>
+                                    <input type="color" id="bg2Picker" name="bg2Picker" >
+                                </div>
+                            </div>
                             <div class="spacer" style="display: block; height: 10px"></div>
-                            <!-- <div class="spacer" style="display: block; height: 10px"></div> -->
-                            <p>color 2</p>
-                            <input type="color" id="bg2Picker" name="bg2Picker" >
-                            <!-- <p>text color 2</p>
-                            <input type="color" id="text2Picker" name="text2Picker" > -->
+                            <p style="font-size: 12px; line-height: 1.2; color: #e22e2e">for optimum contrast, text colors are adjusted automatically</p>
+                            
                         </div>
                     </div>
                 </section>

@@ -517,3 +517,15 @@ function setIndicatorColor(el) {
         indicatorTwo.classList.add("hide");
     }
 }
+
+function flipTitleColors(el) {
+    let spanLine1 = document.querySelector(".details span");
+    let spanLine2 = document.querySelector(".details .slide-title");
+    if (el.checked) {
+        spanLine1.setAttribute("style", "color: var(--text1); background: var(--bg1)");
+        spanLine2.setAttribute("style", "color: var(--text1); background: var(--bg1)");
+    } else {
+        spanLine1.setAttribute("style", "")
+        spanLine2.setAttribute("style", "")
+    }
+}
