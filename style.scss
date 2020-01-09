@@ -20,10 +20,10 @@ $breakpointMD: 768px;
     --text1: #f1f1f1;
     --bg2: #f1f1f1;
     --text2: #202020;
-
+    
     --indicatorColor: #ffffff;
-
-
+    
+    
     --accentSlider: #fff;
     // --accentMain-hover: #c13e0a;
     --testColor: red;
@@ -428,11 +428,11 @@ figure {
                     span {
                         transition: all var(--transitionTimingShort);
                         font-size: 13px;
-                        background: var(--bg2);
-                        color: var(--text2);
+                        background: var(--bg1);
+                        color: var(--text1);
                         display: inline-block;
                         line-height: 14px;
-                        padding: 0 3px;
+                        padding: 1px 3px;
                         .large & {
                             font-size: 15px;
                             line-height: 17px;
@@ -632,7 +632,39 @@ figure {
                 }
                 
             }
-            
+            &[featured]{
+                top: -67px;
+                .description-1-wrapper{
+                    position: relative;
+                    &:before {
+                        transform-origin: top right;
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 6px;
+                        height: 105%;
+                        background: #f05414;
+                        left: -6px;
+                        top: -2px;
+                        z-index: 7;
+                    }
+                }
+                .featured-controls {
+                    margin-bottom: 16px;
+                    display: flex; 
+                    .left {
+                        flex-grow: 1;
+                        .video-controls {
+                            display: flex;
+                            height: 36px;
+                            align-items: center;
+                            figure {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     footer{

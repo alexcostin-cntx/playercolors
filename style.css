@@ -405,11 +405,11 @@ figure {
 .unit-content .content-top .top-bar .left .details span {
   transition: all var(--transitionTimingShort);
   font-size: 13px;
-  background: var(--bg2);
-  color: var(--text2);
+  background: var(--bg1);
+  color: var(--text1);
   display: inline-block;
   line-height: 14px;
-  padding: 0 3px;
+  padding: 1px 3px;
 }
 .large .unit-content .content-top .top-bar .left .details span {
   font-size: 15px;
@@ -596,6 +596,39 @@ figure {
   font-weight: 300;
   padding-top: 10px;
   display: block;
+}
+.unit-bottom[slider] .content[featured] {
+  top: -67px;
+}
+.unit-bottom[slider] .content[featured] .description-1-wrapper {
+  position: relative;
+}
+.unit-bottom[slider] .content[featured] .description-1-wrapper:before {
+  transform-origin: top right;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 105%;
+  background: #f05414;
+  left: -6px;
+  top: -2px;
+  z-index: 7;
+}
+.unit-bottom[slider] .content[featured] .featured-controls {
+  margin-bottom: 16px;
+  display: flex;
+}
+.unit-bottom[slider] .content[featured] .featured-controls .left {
+  flex-grow: 1;
+}
+.unit-bottom[slider] .content[featured] .featured-controls .left .video-controls {
+  display: flex;
+  height: 36px;
+  align-items: center;
+}
+.unit-bottom[slider] .content[featured] .featured-controls .left .video-controls figure {
+  margin-right: 10px;
 }
 #cnx-unit {
   overflow: hidden;

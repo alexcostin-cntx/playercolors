@@ -173,13 +173,18 @@ function startSliderLoop() {
 //-------------------------------------
 
 const cover = document.querySelector(".cover");
-const slide1 = document.querySelector("div[data-type='description']");
+
+const slide1 = document.querySelector(".slide-description");
 const slide1Bottom = document.querySelector(".unit-bottom div[description]");
-const slide2 = document.querySelector("div[data-type='bullet-list']");
+
+const slide2 = document.querySelector(".slide-bullet-list");
 const slide2Bottom = document.querySelector(".unit-bottom div[bullet-list]");
-const slide3 = document.querySelector("div[data-type='quote']");
+
+const slide3 = document.querySelector(".slide-quote");
 const slide3Bottom = document.querySelector(".unit-bottom div[quote]");
 
+const featured = document.querySelector(".slide-featured");
+const featuredBottom = document.querySelector(".unit-bottom div[featured]");
 
 const details = document.querySelector("#cnx-unit .details");
 
@@ -187,13 +192,16 @@ function checkSlideVIsibility() {
     let visible;
     if (!cover.classList.contains("hide")) {
         visible = cover
-    } else if(!slide1.classList.contains("hide"))  {
+    } else if(slide1.getAttribute("active") !== null)  {
         visible = slide1
-    }else if(!slide2.classList.contains("hide"))  {
+    }else if(slide2.getAttribute("active") !== null)  {
         visible = slide2
-    }else if(!slide3.classList.contains("hide"))  {
+    }else if(slide3.getAttribute("active") !== null)  {
         visible = slide3
+    }else if(featured.getAttribute("active") !== null)  {
+        visible = featured
     }
+    
     return visible;
 }
 
@@ -204,6 +212,7 @@ function previewCover() {
     let bottom = document.querySelector(".unit-wrapper div[slider]");
 
     details.classList.add("hide");
+    slide1Bottom.classList.add("hide");
     
     // hide old stuff
     bottom.classList.add("hide");
@@ -226,17 +235,19 @@ function previewSlide1() {
     }
 
     details.classList.remove("hide");
-    
+
     // hide old stuff
     bottom.classList.add("hide");
-    visible.classList.add("hide");
-
+    // visible.classList.add("hide");
+    visible.removeAttribute("active");
     // show new stuff
     slide1.setAttribute("active", "");
-    slide1.classList.remove("hide");
+
     document.querySelector("div[slider].unit-bottom").classList.remove("hide");
     slide1Bottom.classList.remove("hide");
     getSlideTitle("description");
+    switchTitle();
+
 }
 
 function previewSlide2() {
@@ -254,15 +265,17 @@ function previewSlide2() {
     
     // hide old stuff
     bottom.classList.add("hide");
-    visible.classList.add("hide");
+    // visible.classList.add("hide");
+    visible.removeAttribute("active");
 
     // show new stuff
     slide2.setAttribute("active", "");
-    slide2.classList.remove("hide");
+
     document.querySelector("div[slider].unit-bottom").classList.remove("hide");
     slide2Bottom.classList.remove("hide");
     getSlideTitle("bullet-list");
-    bulletAnimation() 
+    bulletAnimation();
+    switchTitle();
 }
 
 function previewSlide3() {
@@ -270,25 +283,66 @@ function previewSlide3() {
     let clsName = (visible == cover) ? visible.className : visible.getAttribute("data-type");
     let bottom;
 
+    details.classList.remove("hide");
+
     if (clsName == "cover") {
-        bottom = document.querySelector(`.unit-wrapper div[${clsName}]`)
+        bottom = document.querySelector(`.unit-wrapper div[cover]`)
     } else{
         bottom = document.querySelector(`.unit-wrapper div[discovered] div[${clsName}]`)
     }
 
+    // console.log(clsName);
+
+    bottom.classList.add("hide");
+    visible.classList.add("hide");
+    visible.removeAttribute("active");
+
+    slide3.setAttribute("active", "");
+    slide3.classList.remove("hide");
+
+    document.querySelector("div[slider].unit-bottom").classList.remove("hide");
+    slide3Bottom.classList.remove("hide");
+    switchTitle();
+    getSlideTitle("quote");
+}
+
+function previewFeatured() {
+    let visible = checkSlideVIsibility();
+    let clsName = (visible == cover) ? visible.className : visible.getAttribute("data-type");
+    let bottom;
     details.classList.remove("hide");
-    
+
+    if (clsName == "cover") {
+        bottom = document.querySelector(`.unit-wrapper div[cover]`)
+    } else{
+        bottom = document.querySelector(`.unit-wrapper div[discovered] div[${clsName}]`)
+    }
+
     // hide old stuff
     bottom.classList.add("hide");
     visible.classList.add("hide");
+    visible.removeAttribute("active");
 
     // show new stuff
-    slide3.setAttribute("active", "");
-    slide3.classList.remove("hide");
-    document.querySelector("div[slider].unit-bottom").classList.remove("hide");
-    slide3Bottom.classList.remove("hide");
-    getSlideTitle("quote");
+    featured.setAttribute("active", "");
+    featured.classList.remove("hide");
 
+    document.querySelector("div[slider].unit-bottom").classList.remove("hide");
+    featuredBottom.classList.remove("hide");
+    switchTitle("alt");
+
+}
+
+function switchTitle(arg) {
+    let normalTitle = document.querySelector("#cnx-unit .details");
+    let altTitle = document.querySelector("#cnx-unit .alt.details");
+    if (arg == "alt") {
+        normalTitle.classList.add("hide");
+        altTitle.classList.remove("hide");
+    } else if (arg !== "alt"){
+        normalTitle.classList.remove("hide");
+        altTitle.classList.add("hide");
+    }
 }
 
 
@@ -518,14 +572,14 @@ function setIndicatorColor(el) {
     }
 }
 
-function flipTitleColors(el) {
-    let spanLine1 = document.querySelector(".details span");
-    let spanLine2 = document.querySelector(".details .slide-title");
-    if (el.checked) {
-        spanLine1.setAttribute("style", "color: var(--text1); background: var(--bg1)");
-        spanLine2.setAttribute("style", "color: var(--text1); background: var(--bg1)");
-    } else {
-        spanLine1.setAttribute("style", "")
-        spanLine2.setAttribute("style", "")
-    }
-}
+// function flipTitleColors(el) {
+//     let spanLine1 = document.querySelector(".details span");
+//     let spanLine2 = document.querySelector(".details .slide-title");
+//     if (el.checked) {
+//         spanLine1.setAttribute("style", "color: var(--text1); background: var(--bg1)");
+//         spanLine2.setAttribute("style", "color: var(--text1); background: var(--bg1)");
+//     } else {
+//         spanLine1.setAttribute("style", "")
+//         spanLine2.setAttribute("style", "")
+//     }
+// }
